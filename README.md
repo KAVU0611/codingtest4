@@ -84,6 +84,8 @@ Ensure CORS allows the frontend origin. In a standard Laravel 10/11 app, `config
 - `paths` includes `api/*`
 - `allowed_origins` includes `http://localhost:5173`
 
+If your Laravel project does not have `config/cors.php` (rare) or you want a preconfigured version, use the `backend-laravel/config/cors.php` provided here. Also see `backend-laravel/.env.example` for environment variables.
+
 ## Adapting to your data folder
 
 If your playlist exists at:
@@ -98,4 +100,3 @@ set this in the Laravel `.env` as `PLAYLIST_PATH` so the backend reads/writes th
 - Filters are case-insensitive; title filter uses "starts with"
 - Empty lines in TSV are ignored
 - The app never mutates existing TSV order; track number is line index (1-based)
-
